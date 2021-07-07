@@ -1,0 +1,282 @@
+--- 
+outlines:
+    default:   { width: 48.3,  height: 79 }
+    tilda:     { width: 30,  height: 79 }
+    bksp:      { width: 67.9,  height: 79 }
+    lctrlesc:  { width: 75, height: 79 }
+    return:    { width: 74, height: 79 }
+    lshift:    { width: 101, height: 79 }
+    spacebar:  { width: 269, height: 79 }
+    fndefault: { width: 55.3,  height: 79 }
+    fnright2x: { width: 101, height: 79 }
+    fnhome:    { width: 75.6, height: 79 }
+    
+
+views:
+    base:
+        - "` 1 2 3 4 5 6 7 8 9 0 - = BackSpace"
+        - "Tab q w e r t y u i o p [ ] \\"
+        - "Ctrl a s d f g h j k l ; ' Return"
+        - "Shift_L z x c v b n m , . / Up Shift_R"
+        - "Esc preferences Alt Menu space show_fnkeys Left Down Right"
+    upper:
+        - "~ ! @ # $ % ^ & * ( ) _ + BackSpace"
+        - "Tab Q W E R T Y U I O P [ ] |"
+        - "Ctrl A S D F G H J K L : \" Return"
+        - "Shift_L Z X C V B N M < > ? Up Shift_R"
+        - "Esc preferences Alt Menu space show_fnkeys Left Down Right"
+    fnkeys:
+        - "Voice F1 F2 F3 F4 Seven Eight Nine NumSlash Home BkspFn"
+        - "TabFn F5 F6 F7 F8 Four Five Six NumAst End Ins Del"
+        - "Ctrl F9 F10 F11 F12 One Two Three NumMinus PgUp ReturnFn"
+        - "ShiftLFn SysRq ScrL Break NumLock Zero NumComa NumPeriod NumPlus PgDn Up Shift_R"
+        - "Esc preferences Alt Menu space show_letters Left Down Right"
+
+buttons:
+    Voice:
+        outline: "lctrlesc"
+        text: " "
+    Shift_L:
+        action:
+            locking:
+                lock_view: "upper"
+                unlock_view: "base"
+        outline: "lshift"
+        icon: "key-shift"
+    Shift_R:
+        action:
+            locking:
+                lock_view: "upper"
+                unlock_view: "base"
+        outline: "default"
+        icon: "key-shift"
+    ShiftLFn:
+        text: " "
+        outline: "lctrlesc"
+        icon: "key-shift"
+    "`":
+        text: "`"
+        outline: "tilda"
+    "~":
+        text: "~"
+        outline: "tilda"
+    BackSpace:
+        outline: "bksp"
+        icon: "edit-clear-symbolic"
+        action: erase
+    preferences:
+        action: "show_prefs"
+        icon: "keyboard-mode-symbolic"
+    show_letters:
+        action:
+            set_view: "base"
+        label: "Fn"
+        outline: "default"
+    show_fnkeys:
+        action:
+            set_view: "fnkeys"
+        outline: "default"
+        label: "Fn"
+    circle:
+        text: " "
+        outline: "default"
+    space:
+        outline: "spacebar"
+        text: " "
+    Return:
+        outline: "return"
+        icon: "key-enter"
+        keysym: "Return"
+    ReturnFn:
+        outline: "fnright2x"
+        icon: "key-enter"
+        keysym: "Return"
+    colon:
+        text: ":"
+    F1:
+        outline: "fndefault"
+        keysym: "F1"
+    F2:
+        outline: "fndefault"
+        keysym: "F2"
+    F3:
+        outline: "fndefault"
+        keysym: "F3"
+    F4:
+        outline: "fndefault"
+        keysym: "F4"
+    F5:
+        outline: "fndefault"
+        keysym: "F5"
+    F6:
+        outline: "fndefault"
+        keysym: "F6"
+    F7:
+        outline: "fndefault"
+        keysym: "F7"
+    F8:
+        outline: "fndefault"
+        keysym: "F8"
+    F9:
+        outline: "fndefault"
+        keysym: "F9"
+    F10:
+        outline: "fndefault"
+        keysym: "F10"
+    F11:
+        outline: "fndefault"
+        keysym: "F11"
+    F12:
+        outline: "fndefault"
+        keysym: "F12"
+    Esc:
+        outline: "lctrlesc"
+        keysym: "Escape"
+    Tab:
+        outline: "default"
+        keysym: "Tab"
+    Menu:
+        outline: "default"
+        keysym: "Menu"
+        label: "☰"
+    Break:
+        label: "Brk"
+        outline: "fndefault"
+        keysym: "Break"
+    SysRq:
+        outline: "fndefault"
+        keysym: "VoidSymbol"
+    ScrL:
+        outline: "fndefault"
+        keysym: "Scroll_Lock"
+    Home:
+        outline: "fnhome"
+        keysym: "Home"
+    End:
+        outline: "fnhome"
+        keysym: "End"
+    PgUp:
+        outline: "fnhome"
+        keysym: "Page_Up"
+    PgDn:
+        outline: "fnhome"
+        keysym: "Page_Down"
+    Up:
+        label: "↑"
+        outline: "default"
+        keysym: "Up"
+    Left:
+        label: "←"
+        outline: "default"
+        keysym: "Left"
+    Down:
+        label: "↓"
+        outline: "default"
+        keysym: "Down"
+    Right:
+        label: "→"
+        outline: "default"
+        keysym: "Right"
+    Ctrl:
+        modifier: "Control"
+        outline: "lctrlesc"
+        label: "Ctrl"
+    Alt:
+        modifier: "Alt"
+        outline: "default"
+        label: "Alt"
+    Zero:
+        label: "0"
+        text: "0"
+        outline: "fndefault"
+    One:
+        label: "1"
+        text: "1"
+        outline: "fndefault"
+    Two:
+        label: "2"
+        text: "2"
+        outline: "fndefault"
+    Three:
+        label: "3"
+        text: "3"
+        outline: "fndefault"
+    Four:
+        label: "4"
+        text: "4"
+        outline: "fndefault"
+    Five:
+        label: "5"
+        text: "5"
+        outline: "fndefault"
+    Six:
+        label: "6"
+        text: "6"
+        outline: "fndefault"
+    Seven:
+        label: "7"
+        text: "7"
+        outline: "fndefault"
+    Eight:
+        label: "8"
+        text: "8"
+        outline: "fndefault"
+    Nine:
+        label: "9"
+        text: "9"
+        outline: "fndefault"
+    NumSlash:
+        label: "/"
+        text: "/"
+        outline: "fndefault"
+    NumAst:
+        label: "*"
+        text: "*"
+        outline: "fndefault"
+    NumMinus:
+        label: "-"
+        text: "-"
+        outline: "fndefault"
+    NumComa:
+        label: ","
+        text: ","
+        outline: "fndefault"
+    NumPeriod:
+        label: "."
+        text: "."
+        outline: "fndefault"
+    NumPlus:
+        label: "+"
+        text: "+"
+        outline: "fndefault"
+    NumLock:
+        label: "NLk"
+        outline: "fndefault"
+        keysym: "Num_Lock"
+    Home:
+        label: "Home"
+        keysym: "Home"
+        outline: "fnhome"
+    End:
+        label: "End"
+        keysym: "End"
+        outline: "fnhome"
+    Ins:
+        label: "Ins"
+        keysym: "Insert"
+        outline: "default"
+    Del:
+        label: "Del"
+        keysym: "Delete"
+        outline: "default"
+    BkspFn:
+        outline: "fnright2x"
+        icon: "edit-clear-symbolic"
+        action: erase
+    TabFn:
+        outline: "lctrlesc"
+        keysym: "Tab"
+    
+    
+        
+
